@@ -1,10 +1,10 @@
 sudo: required
 services: 
   - docker
-# before_install:
-#   - docker build -t icoretchi/react-test -f ./client/Dockerfile.dev ./client
-# script:
-#   - docker run icoretchi/react-test npm run test -- --coverage
+before_install:
+  - docker build -t icoretchi/react-test -f ./client/Dockerfile.dev ./client
+script:
+  - docker run icoretchi/react-test npm test -- --coverage
 after_success:
   - docker build -t icoretchi/multi-client ./client
   - docker build -t icoretchi/multi-nginx ./nginx

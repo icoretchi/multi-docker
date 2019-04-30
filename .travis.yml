@@ -19,4 +19,4 @@ after_success:
   - docker push icoretchi/multi-client 
   - docker push icoretchi/multi-nginx 
   - docker push icoretchi/multi-server 
-  - docker push icoretchi/multi-worker 
+  - docker push icoretchi/multi-worker
